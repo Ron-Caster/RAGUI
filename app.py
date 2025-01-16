@@ -5,7 +5,7 @@ from pathlib import Path
 from rag_test import RAGSystem
 
 st.set_page_config(
-    page_title="WinVIS Chat",
+    page_title="WinVIZ Chat",
     page_icon="🤖",
     layout="wide"
 )
@@ -103,7 +103,7 @@ def file_manager_ui():
 def main():
     initialize_session_state()
 
-    st.title("WinVIS Chat UI 🤖")
+    st.title("WinVIZ Chat UI 🤖")
     
     with st.sidebar:
         st.header("Document Management")
