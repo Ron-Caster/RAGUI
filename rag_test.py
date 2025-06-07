@@ -33,7 +33,7 @@ class RAGSystem:
             )
         
         # Configure settings
-        Settings.llm = Groq(model="llama-3.3-70b-specdec", api_key=GROQ_API_KEY)
+        Settings.llm = Groq(model="llama-3.3-70b-versatile", api_key=GROQ_API_KEY)
         Settings.embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
         Settings.node_parser = SentenceSplitter(chunk_size=1024, chunk_overlap=200)
         
