@@ -34,7 +34,10 @@ class RAGSystem:
         
         # Configure settings
         Settings.llm = Groq(model="llama-3.3-70b-versatile", api_key=GROQ_API_KEY)
-        Settings.embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
+        Settings.embed_model = HuggingFaceEmbedding(
+            model_name="sentence-transformers/all-MiniLM-L6-v2",
+            device="cpu"  # Force CPU usage
+        )
         Settings.node_parser = SentenceSplitter(chunk_size=1024, chunk_overlap=200)
         
         self.query_engine = None
